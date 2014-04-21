@@ -1,0 +1,133 @@
+/**
+ * Styles for easy search dialogs
+ */
+
+/* body */
+body {
+  font-family : Verdana, Arial;
+  font-size : 11px;
+  font-weight: normal;
+  color : black;
+  background-color : #FFFFFF;
+  margin : 0px;
+  padding: 8px;
+  text-align: left;
+}
+
+table {
+  font-size : 11px;
+  color: black;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Default forms behaviour */
+form {
+  margin: 0px 0px 5px 0px;
+  width: 99,9%;
+}
+
+select {
+  font-family : Verdana, Arial;
+  font-weight : normal;
+  font-size : 11px;
+}
+
+input {
+  border : rgb(153,166,200) 1px solid;
+  font-family : Verdana, Arial;
+  font-weight : normal;
+  font-size : 11px;
+}
+
+input.button {
+  border : 0px;
+  font-weight : bold;
+  color : #FFFFFF;
+  text-align : center;
+  height : 18px;
+  background: url(../images/general/button.gif) repeat-x center;
+}
+
+input.image {
+  border: none;
+}
+
+/* Default image behaviour */
+img {
+  border: 0px;
+}
+
+legend {
+  color: #002276;
+  font-weight : bold;
+}
+
+fieldset {
+  border: #99A6C8 1px solid;
+  margin: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+}
+
+/* Default <a> behaviour */
+a {
+  text-decoration: underlined;
+  color: rgb(5,38,121);
+}
+
+p#limit {
+  align: center;
+}
+
+span.pagebanner {
+  margin-right: 5px;
+  text-align: left;
+}
+
+span.pagelinks {
+  margin-right: 5px;
+}
+
+table.search {
+  margin: auto;
+  display: block;
+  float:left;
+}
+
+table.search thead {
+  color : #5B5B5B;
+  font-weight : bold;
+}
+
+table.search th.header {
+  padding: 5px 8px 6px 8px;
+  background-color: rgb(209,218,239);
+  repeat-x: top;
+  color: rgb(5,38,121);
+  border-right: 1px solid white;
+  border-left: 0px solid white;
+  border-top: 1px solid rgb(120,136,180);
+  border-bottom: 1px solid rgb(120,136,180);
+  text-align: center;
+}
+
+table.search th a {
+  color: rgb(5,38,121);
+  text-decoration: none;
+}
+
+table.search tr td {
+  padding: 5px 5px 5px 5px;
+  text-align: left;
+}
+
+table.search tr.even {
+  background-color:  rgb(235,238,247);
+}
+
+table.search tr.odd {
+  background-color: white;
+}

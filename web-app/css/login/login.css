@@ -1,0 +1,59 @@
+/* ========================================================================
+   Login page styles
+======================================================================== */
+
+table#loginForm {
+   /* margin: auto;*/
+    margin-top: 20px;
+    text-align: center;
+}
+
+p.error {
+    color: red;
+}
+
+#bgImg{
+    height:205px;
+    border: none;
+    background: url(../../images/login/startlogin.jpg) no-repeat center;
+}
+
+#loginKey {
+    padding: 10px 10px 10px 10px;
+    vertical-align: middle;
+    width: 400px;
+    height: 165px;
+    margin: auto;
+    filter: alpha (opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.8;
+    border: #949ABD solid 1px;
+    background: #F4F4F4 url(../../images/login/loginkey.gif) no-repeat left;
+}
+
+table#loginForm input, table#loginForm select {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+input.transparency {
+    filter: alpha (opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.8;
+}
+
+label {
+    font-weight: bold;
+}
+
+td#content {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#loginForm td.signup {
+    color:#666666;
+    padding-top:5px;
+    font-size:10px;
+}
+/* End of login page styles */

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.jcatalog.grailsflow</groupId>
+  <artifactId>grailsflow-demo</artifactId>
+  <version>1.3.4-SNAPSHOT</version>
+  <packaging>grails-app</packaging>
+
+  <name>Grailsflow demo application</name>
+
+  <scm>
+    <connection>scm:svn:svn+ssh://${maven.user}@develop.jcatalog.com/grailsflow/trunk</connection>
+    <developerConnection>scm:svn:svn+ssh://${maven.user}@develop.jcatalog.com/grailsflow/trunk</developerConnection>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>${maven2ReleasesDeploymentRepositoryId}</id>
+      <name>maven2Releases</name>
+      <url>${maven2ReleasesDeploymentRepositoryUrl}</url>
+    </repository>
+    <snapshotRepository>
+      <id>${maven2SnapshotsDeploymentRepositoryId}</id>
+      <name>maven2Snapshots</name>
+      <url>${maven2SnapshotsDeploymentRepositoryUrl}</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <!-- this plugin is required for supporting non standard packaging type 'grails-plugin' -->
+        <groupId>org.grails</groupId>
+        <artifactId>grails-maven-plugin</artifactId>
+        <version>1.1</version>
+        <extensions>true</extensions>
+      </plugin>
+
+      <plugin>
+        <groupId>com.jcatalog.maven</groupId>
+        <artifactId>maven-jcatalog-artifact-plugin</artifactId>
+        <version>1.0</version>
+        <configuration>
+          <remoteRepositoryId>${maven1DeploymentRepositoryId}</remoteRepositoryId>
+          <remoteRepositoryUrl>${maven1DeploymentRepositoryUrl}</remoteRepositoryUrl>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>
