@@ -4,7 +4,7 @@ grails.work.dir = "target"
 
 grails.project.war.file = "${appName}-${appVersion}.war"
 
-grails.plugin.location.'grailsflow-core' = '../grailsflow-core'
+grails.plugin.location.'grailsflow-core' = '../grailsflow-core-plugin'
 
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
