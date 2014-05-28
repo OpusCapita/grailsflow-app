@@ -44,10 +44,6 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:3.6.10.6" // or ":hibernate4:4.1.11.6"
 
         runtime("org.grails.plugins:resources:1.1.6")
-        runtime('org.grails.plugins:quartz:0.4.2',
-                'org.grails.plugins:mail:0.7.1',
-                'org.grails.plugins:jquery:1.7.1',
-                'org.grails.plugins:jquery-ui:1.8.15',
-                'org.grails.plugins:jqplot:0.1')
+        runtime('org.grails.plugins:mail:0.7.1')
     }
 }
