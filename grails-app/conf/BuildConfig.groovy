@@ -38,9 +38,11 @@ grails.project.dependency.resolution = {
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.47"
+        // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.6" // or ":hibernate4:4.1.11.6"
 
-        runtime(":resources:1.2.8")
-        runtime(':mail:1.0.5')
+        runtime ":resources:1.2.8"
+
+        runtime ":mail:1.0.5"
     }
 }
