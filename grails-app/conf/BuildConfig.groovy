@@ -4,8 +4,6 @@ grails.work.dir = "target"
 
 grails.project.war.file = "${appName}-${appVersion}.war"
 
-grails.plugin.location.'grailsflow-core' = '../grailsflow-core-plugin'
-
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
     inherits "global"
@@ -29,10 +27,18 @@ grails.project.dependency.resolution = {
         mavenRepo "http://repository.codehaus.org"
         mavenRepo "http://download.java.net/maven/2/"
         mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "http://repo.grails.org/grails/core"
     }
 
     dependencies {
         runtime ('mysql:mysql-connector-java:5.1.6')
+        compile ('com.sdicons.jsontools:jsontools-core:1.7',
+                'commons-httpclient:commons-httpclient:3.0.1',
+                'commons-beanutils:commons-beanutils:1.9.2')
+        runtime ('javax.mail:mail:1.4',
+                'javax.activation:activation:1.1',
+                'org.apache.ant:ant:1.7.1',
+                'org.apache.ant:ant-launcher:1.7.1')
     }
     
     plugins {
@@ -44,5 +50,7 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.8"
 
         runtime ":mail:1.0.5"
+
+        compile ":grailsflow:1.4"
     }
 }
