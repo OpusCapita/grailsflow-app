@@ -27,91 +27,102 @@
   </head>
 
   <body>
-  <div name=content>
-    <b class="header">${menu_bundle['menu.grailsManagement']}</b><br/>
-    <p>If you use the Grailsflow demo application for the first time, please read the
-       <a href="http://www.jcatalog.com/oss/grailsflow/firstSteps.html">first steps</a>
-       document.
-    </p>
-    <p>You find more information about the main ideas behind Grailsflow
-       <a href="http://www.jcatalog.com/oss/grailsflow/index.html">here</a>.
-    </p>
-    <p>Thank you for trying Grailsflow. We appreciate your feedback. Send us an
-       <a href="http://www.jcatalog.com/oss/grailsflow/contact.html">email</a>.
-    </p>
+  <div class="row">
+    <div class="col-md-12 col-xs-12 col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">${menu_bundle['menu.grailsManagement']}</div>
+            <div class="panel-body">
+                <p>If you use the Grailsflow demo application for the first time, please read the
+                   <a href="http://www.jcatalog.com/oss/grailsflow/firstSteps.html">first steps</a>
+                   document.
+                </p>
+                <p>You find more information about the main ideas behind Grailsflow
+                   <a href="http://www.jcatalog.com/oss/grailsflow/index.html">here</a>.
+                </p>
+                <p>Thank you for trying Grailsflow. We appreciate your feedback. Send us an
+                   <a href="http://www.jcatalog.com/oss/grailsflow/contact.html">email</a>.
+                </p>
+            </div>
+        </div>
 
-    <h2 class="headline">${process_types['grailsflow.title.startProcess']}</h2>
-    <table class="standard" width="100%">
-      <thead>
-        <tr>
-          <th>${process_types['grailsflow.label.processType']}</th>
-          <th width="70%">${process_types['grailsflow.label.description']}</th>
-          <th>${process_types['grailsflow.label.operation']}</th>
-        </tr>
-      </thead>
-      <tbody>
-            <g:each in="${processClasses}" var="item" status="i">
-              <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                <td><gf:translatedValue translations="${item.label}" default="${item.processType}"/></td>
-                <td><gf:translatedValue translations="${item.description}" default=""/></td>
-                <td>
-                  <g:link action="startProcess" controller="processManagement" id="${item.processType}" title="${common['grailsflow.command.start']}">${common['grailsflow.command.start']}</g:link>
-                </td>
-              </tr>
-            </g:each>
-      </tbody>
-    </table>    
-    <p class="title">
-      <img src="${g.resource(dir:'images/general',file:'warning16.gif')}"/>&nbsp;
-      ${processClasses.size()}&nbsp;${application_bundle['label.of']}&nbsp;${typesTotal}&nbsp;
-      ${application_bundle['message.processTypes.listed']}
+        <div class="panel panel-default">
+            <div class="panel-heading">${process_types['grailsflow.title.startProcess']}</div>
+            <div class="panel-body">
+                <img src="${g.resource(dir:'images/general',file:'warning16.gif')}"/>&nbsp;
+                ${processClasses.size()}&nbsp;${application_bundle['label.of']}&nbsp;${typesTotal}&nbsp;
+                ${application_bundle['message.processTypes.listed']}
 
-      <g:if test="${processClasses.size() < typesTotal}">
-        ${application_bundle['message.processTypes.reviewAll']}&nbsp;
-        <g:link action="showTypes" controller="process">
-          ${menu_bundle['menu.startProcesType']}          
-        </g:link>.
-      </g:if>
-    </p><br/>
-    <h2 class="headline">${worklist['grailsflow.title.worklist']}</h2>
-    <table width="100%" class="standard">
-             <thead>
-               <tr>
-                  <th>${worklist['grailsflow.label.nodeID']}</th>
-                  <th>${worklist['grailsflow.label.processType']}</th>
-                  <th>${worklist['grailsflow.label.description']}</th>
-                  <th>${worklist['grailsflow.label.status']}</th>
-                  <th>${worklist['grailsflow.label.caller']}</th>
-                  <th>${worklist['grailsflow.label.startedOn']}</th>
-                  <th>${worklist['grailsflow.label.dueOn']}</th>
-                </tr>
-             </thead>
-             <tbody>
-               <g:each in="${processNodeList.keySet()}" var="node">
+                <g:if test="${processClasses.size() < typesTotal}">
+                    ${application_bundle['message.processTypes.reviewAll']}&nbsp;
+                    <g:link action="showTypes" controller="process">
+                        ${menu_bundle['menu.startProcesType']}
+                    </g:link>.
+                </g:if>
+            </div>
+            <table class="table table-striped" width="100%">
+                    <thead>
                     <tr>
-                       <td><g:if test="${processNodeList[node]}">
-                             <g:link id="${node.id}" action="showNodeDetails" controller="process">
-                               ${node.nodeID}
-                             </g:link>
-                           </g:if>
-                           <g:else>
-                             ${node.nodeID}
-                           </g:else>
-                       </td>
-                       <td>${node.process ? node.process.type: ''}</td>
-                       <td>${node.description}</td>
-                       <td>${node.status?.statusID}</td>
-                       <td>${node.caller}</td>
-                       <td><gf:displayDateTime value="${node.startedOn}"/></td>
-                       <td><gf:displayDateTime value="${node.dueOn}"/></td>
+                        <th>${process_types['grailsflow.label.processType']}</th>
+                        <th width="70%">${process_types['grailsflow.label.description']}</th>
+                        <th>${process_types['grailsflow.label.operation']}</th>
                     </tr>
-               </g:each>
-             </tbody>
-    </table>
-    <div class="paginateButtons">
-      <g:paginate total="${worklistTotal}" action="portal"/>
-    </div>
+                    </thead>
+                    <tbody>
+                    <g:each in="${processClasses}" var="item" status="i">
+                        <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
+                            <td><gf:translatedValue translations="${item.label}" default="${item.processType}"/></td>
+                            <td><gf:translatedValue translations="${item.description}" default=""/></td>
+                            <td>
+                                <g:link action="startProcess" class="btn btn-sm btn-default" controller="processManagement" id="${item.processType}" title="${common['grailsflow.command.start']}">${common['grailsflow.command.start']}</g:link>
+                            </td>
+                        </tr>
+                    </g:each>
+                    </tbody>
+            </table>
+        </div>
 
+        <div class="panel panel-default">
+            <div class="panel-heading">${worklist['grailsflow.title.worklist']}</div>
+
+            <table width="100%" class="table table-striped">
+                 <thead>
+                   <tr>
+                      <th>${worklist['grailsflow.label.nodeID']}</th>
+                      <th>${worklist['grailsflow.label.processType']}</th>
+                      <th>${worklist['grailsflow.label.description']}</th>
+                      <th>${worklist['grailsflow.label.status']}</th>
+                      <th>${worklist['grailsflow.label.caller']}</th>
+                      <th>${worklist['grailsflow.label.startedOn']}</th>
+                      <th>${worklist['grailsflow.label.dueOn']}</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                   <g:each in="${processNodeList.keySet()}" var="node">
+                        <tr>
+                           <td><g:if test="${processNodeList[node]}">
+                                 <g:link id="${node.id}" action="showNodeDetails" controller="process">
+                                   ${node.nodeID}
+                                 </g:link>
+                               </g:if>
+                               <g:else>
+                                 ${node.nodeID}
+                               </g:else>
+                           </td>
+                           <td>${node.process ? node.process.type: ''}</td>
+                           <td>${node.description}</td>
+                           <td>${node.status?.statusID}</td>
+                           <td>${node.caller}</td>
+                           <td><gf:displayDateTime value="${node.startedOn}"/></td>
+                           <td><gf:displayDateTime value="${node.dueOn}"/></td>
+                        </tr>
+                   </g:each>
+                 </tbody>
+            </table>
+            <div class="paginateButtons">
+              <g:paginate total="${worklistTotal}" action="portal"/>
+            </div>
+        </div>
+    </div>
   </div>
 
   </body>

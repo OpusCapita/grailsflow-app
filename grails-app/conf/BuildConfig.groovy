@@ -4,6 +4,8 @@ grails.work.dir = "target"
 
 grails.project.war.file = "${appName}-${appVersion}.war"
 
+grails.plugin.location.'grailsflow' = '../grailsflow-core-plugin'
+
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
@@ -48,10 +50,11 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.8"
         runtime ":mail:1.0.5"
 
-        compile ":grailsflow:1.4.1"
+        compile ":twitter-bootstrap:3.3.1"
+      //  compile ":grailsflow:1.5-SNAPSHOT"
+
         runtime(':jquery:1.11.1',
-                ':jquery-ui:1.10.3',
-                ':jqplot:0.1')
+                ':jquery-ui:1.10.3')
         compile ":export:1.6"
         compile ":quartz:1.0.1"
     }

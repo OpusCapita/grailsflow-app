@@ -30,6 +30,9 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
 // enabled native2ascii conversion of i18n properties files
 grails.enable.native2ascii = true
 
+// Bootstrap
+grails.plugins.twitterbootstrap.fixtaglib = true
+
 // configuring host for email sending
 grails.mail.host = "mail.scand"
 grails.mail.default.from="server@grailsflow.com"
@@ -65,7 +68,7 @@ grailsflow.events.mail.account="masha"
 grailsflow.events.mail.password="masha"
 
 // configuring i18n additional locations
-// TODO: remove depricated usage of Holders.grailsApplication with
+// TODO: remove deprecated usage of Holders.grailsApplication with
 // 'grailsApplication.isWarDeployed()' after fixing bug
 // http://jira.grails.org/browse/GRAILS-8673
 if (grails.util.Holders.grailsApplication?.warDeployed) {

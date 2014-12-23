@@ -22,36 +22,42 @@
     </title>
 
     <gf:messageBundle bundle="grailsflow.common" var="common"/>
-    <r:require modules="coreapp"/>
+    <r:require modules="grailsflow"/>
+    <r:require modules="bootstrap"/>
     <r:layoutResources/>
     <g:layoutHead/>
+
   </head>
   <body>
 
-  <div>
+  <div class="container">
     <g:if test="${!session.externalCall}">
-      <div class="header">
-        <g:render template="/layouts/grailsflow/header" model="['tab':'management']"/>
+      <div class="row margin-bottom-10">
+        <div class="col-md-12 col-lg-12 col-xs-12">
+            <g:render template="/layouts/grailsflow/header" model="['tab':'management']"/>
+
+        </div>
       </div>
     </g:if>
-    <table border="0px" cellspacing="0" cellpadding="0" width="100%" height="380">
-      <tbody>
-        <tr>
-          <td id="menu">
-            <g:render template="/layouts/grailsflow/menu"/>
-          </td>
-          <td height="100%" width="100%" valign="top" id="fullContent">
-             <g:layoutBody/>
-             <r:layoutResources/>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+    <div class="row">
+      <div class="col-md-2 col-lg-2 col-xs-2">
+        <g:render template="/layouts/grailsflow/menu"/>
+      </div>
+      <div class="col-md-10 col-lg-10 col-xs-10">
+        <g:layoutBody/>
+        <r:layoutResources/>
+      </div>
+    </div>
+
     <g:if test="${!session.externalCall}">
-      <div class="footer">
-        <g:render template="/layouts/grailsflow/footer"/>
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-xs-12 footer">
+          <g:render template="/layouts/grailsflow/footer"/>
+        </div>
       </div>
     </g:if>
 </div>
+
 </body>
 </html>
