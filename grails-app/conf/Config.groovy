@@ -43,6 +43,9 @@ environments {
 	}
 }
 
+grails.databinding.trimStrings = true
+grails.databinding.convertEmptyStringsToNull = true
+
 // configuring Scheduler
 
 // NodeActivarorJob
