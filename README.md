@@ -8,4 +8,7 @@ It is now compatible with **Grails 2.3.x**, current released version: **1.4.1** 
 
 For the latest updates and release information visit [Grailsflow site](http://grailsflow.org) and follow [@grailsflow](https://twitter.com/grailsflow) on twitter.
 
+If you have questions or found a bug, please open an issue in [JIRA](http://jira.jcatalog.com/browse/GFW) or put question on [Stackoverflow](http://stackoverflow.com/tags/grailsflow)
+
 Lead: [July Antonicheva](https://github.com/julyantonicheva)
+
