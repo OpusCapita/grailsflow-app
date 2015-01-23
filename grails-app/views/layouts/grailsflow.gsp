@@ -13,10 +13,11 @@
 -->
 
 <!-- Do not forget to duplicate changes in main.gsp -->
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>                      
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
     <title>
       <g:layoutTitle default="Grailsflow"/>
     </title>
