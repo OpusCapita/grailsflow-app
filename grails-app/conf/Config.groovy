@@ -15,7 +15,7 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
                       form: 'application/x-www-form-urlencoded',
                       multipartForm: 'multipart/form-data'
                     ]
-grails.converters.json.pretty.print = true
+//grails.converters.json.pretty.print = true
 grails.converters.json.default.deep = true
 // locations to search for config files that get merged into the main config
 // config files can either be Java properties files or ConfigSlurper scripts
