@@ -33,14 +33,14 @@
             <div class="panel-heading">${menu_bundle['menu.grailsManagement']}</div>
             <div class="panel-body">
                 <p>If you use the Grailsflow demo application for the first time, please read the
-                   <a href="http://www.jcatalog.com/oss/grailsflow/firstSteps.html">first steps</a>
+                   <a href="http://grailsflow.org/about/firststeps-copy/">first steps</a>
                    document.
                 </p>
                 <p>You find more information about the main ideas behind Grailsflow
-                   <a href="http://www.jcatalog.com/oss/grailsflow/index.html">here</a>.
+                   <a href="http://grailsflow.org/about">here</a>.
                 </p>
-                <p>Thank you for trying Grailsflow. We appreciate your feedback. Send us an
-                   <a href="http://www.jcatalog.com/oss/grailsflow/contact.html">email</a>.
+                <p>Thank you for trying Grailsflow. We appreciate your feedback. See here
+                   <a href="http://grailsflow.org/community">the community information</a>.
                 </p>
             </div>
         </div>
