@@ -4,7 +4,7 @@ grails.work.dir = "target"
 
 grails.project.war.file = "${appName}-${appVersion}.war"
 
-//grails.plugin.location.'grailsflow' = '../grailsflow-core-plugin'
+grails.plugin.location.'grailsflow' = '../grailsflow-core-plugin'
 
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
@@ -34,8 +34,10 @@ grails.project.dependency.resolution = {
         runtime ('mysql:mysql-connector-java:5.1.6')
         compile ('com.sdicons.jsontools:jsontools-core:1.7',
                 'commons-httpclient:commons-httpclient:3.0.1',
-                'commons-beanutils:commons-beanutils:1.9.2')
+                'commons-beanutils:commons-beanutils:1.9.2',
+                'javax.validation:validation-api:1.1.0.Final')
         runtime ('javax.mail:mail:1.4',
+                'org.hibernate:hibernate-validator:5.0.3.Final',
                 'javax.activation:activation:1.1',
                 'org.apache.ant:ant:1.7.1',
                 'org.apache.ant:ant-launcher:1.7.1')
@@ -43,18 +45,16 @@ grails.project.dependency.resolution = {
     
     plugins {
         // plugins for the build system only
-        build ":tomcat:7.0.47"
-        // plugins needed at runtime but not for compilation
-        runtime ":hibernate:3.6.10.6" // or ":hibernate4:4.1.11.6"
-
+        build   ":tomcat:7.0.55"
+        runtime ":hibernate:3.6.10.18"
         runtime ":resources:1.2.8"
         runtime ":mail:1.0.5"
 
         compile ":twitter-bootstrap:3.3.1"
-        compile ":grailsflow:1.5"
+      //  compile ":grailsflow:1.6-SNAPSHOT"
 
         runtime(':jquery:1.11.1',
-                ':jquery-ui:1.10.3')
+                ':jquery-ui:1.10.4')
         compile ":export:1.6"
         compile ":quartz:1.0.1"
     }
