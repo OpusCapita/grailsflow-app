@@ -4,7 +4,7 @@ grails.work.dir = "target"
 
 grails.project.war.file = "${appName}-${appVersion}.war"
 
-//grails.plugin.location.'grailsflow' = '../grailsflow-core-plugin'
+grails.plugin.location.'grailsflow' = '../grailsflow-core-plugin'
 
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
@@ -51,7 +51,7 @@ grails.project.dependency.resolution = {
         runtime ":mail:1.0.5"
 
         compile ":twitter-bootstrap:3.3.1"
-        compile ":grailsflow:1.6"
+    //    compile ":grailsflow:1.6"
 
         runtime(':jquery:1.11.1',
                 ':jquery-ui:1.10.4')
