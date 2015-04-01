@@ -82,6 +82,11 @@ if (grails.util.Holders.grailsApplication?.warDeployed) {
   grailsflow.i18n.locations = ["file:${grails.util.BuildSettingsHolder.settings?.resourcesDir?.path}/grails-app/i18n/"]
 }
 
+// configuring nodeActivator comparator (default variant is sorting by date desc)
+ //  grailsflow.nodeActivator.comparator =  { def node1, def node2 ->
+ //      return node1.nodeID <=> node2.nodeID
+ //  }
+
 // log4j configuration
 log4j = {
 
