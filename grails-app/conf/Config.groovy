@@ -64,6 +64,10 @@ grailsflow.scheduler.eventsEmailCheck.autoStart = false    // disabled by defaul
 grailsflow.scheduler.eventsEmailCheck.startDelay = 60000   // executes every minute
 grailsflow.scheduler.eventsEmailCheck.repeatInterval = 60000 // executes every minute
 
+// EmailEvents
+//grailsflow.scheduler.clusterChecker.autoStart = false    // disabled by default
+grailsflow.scheduler.clusterChecker.startDelay = 10000   //
+grailsflow.scheduler.clusterChecker.repeatInterval = 5000 //
 
 // configuring host for getting events email
 grailsflow.events.mail.enabled=false
