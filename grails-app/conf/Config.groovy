@@ -56,18 +56,18 @@ grailsflow.scheduler.nodeActivator.startDelay = 60000         // starts in one m
 grailsflow.scheduler.nodeActivator.repeatInterval = 15000     // executes every 15 seconds
 
 // DueDateJob
-//grailsflow.scheduler.nodeDueDate.autoStart = false    // disable auto starting for Engine Job
-grailsflow.scheduler.nodeDueDate.repeatInterval = 60000       // executes every minute
+// grailsflow.scheduler.nodeDueDate.autoStart = true    // disable auto starting for Engine Job
+grailsflow.scheduler.nodeDueDate.repeatInterval = 600000       // executes every minute
 
 // EmailEvents
-grailsflow.scheduler.eventsEmailCheck.autoStart = false    // disabled by default
+grailsflow.scheduler.eventsEmailCheck.autoStart = false    // enabled by default
 grailsflow.scheduler.eventsEmailCheck.startDelay = 60000   // executes every minute
 grailsflow.scheduler.eventsEmailCheck.repeatInterval = 60000 // executes every minute
 
 // EmailEvents
-//grailsflow.scheduler.clusterChecker.autoStart = false    // disabled by default
-grailsflow.scheduler.clusterChecker.startDelay = 10000   //
-grailsflow.scheduler.clusterChecker.repeatInterval = 5000 //
+//grailsflow.scheduler.clusterChecker.autoStart = false    // enabled by default
+//grailsflow.scheduler.clusterChecker.startDelay = 10000   //
+//grailsflow.scheduler.clusterChecker.repeatInterval = 5000 //
 
 // configuring host for getting events email
 grailsflow.events.mail.enabled=false
@@ -143,7 +143,7 @@ grails.resources.modules = {
         resource url:'/css/search.css'
     }
 }
-
+grailsflow.clusterChecker.lockExpiredInterval = "60000"
 /* grailsflow.customizedDueDate = { Date dueDate ->
     Calendar date = Calendar.getInstance()
     date.setTime(dueDate)
