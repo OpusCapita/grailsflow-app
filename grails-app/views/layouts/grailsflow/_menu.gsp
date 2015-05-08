@@ -27,6 +27,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">${menu_bundle['menu.header.administration']}</div>
     <ul class="list-group">
+        <li class="list-group-item"><g:link controller="process" action="deleteProcesses">${menu_bundle['menu.deleteProcesses']}</g:link></li>
         <li class="list-group-item"><g:link controller="processDef" action="editTypes">${menu_bundle['menu.editProcesTypes']}</g:link></li>
         <li class="list-group-item"><g:link controller="analyse" action="analyseResponse">${menu_bundle['menu.analyseResponse']}</g:link></li>
         <li class="list-group-item"><g:link controller="document" action="showDirectoryContent">${menu_bundle['menu.showDocuments']}</g:link></li>
