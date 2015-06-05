@@ -52,7 +52,7 @@ grails.project.dependency.resolution = {
 
         compile ":twitter-bootstrap:3.3.1"
     //    compile ":grailsflow:1.6"
-
+        runtime ':font-awesome-resources:4.3.0.1'
         runtime(':jquery:1.11.1',
                 ':jquery-ui:1.10.4')
         compile ":export:1.6"

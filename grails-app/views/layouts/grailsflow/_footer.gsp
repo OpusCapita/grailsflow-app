@@ -13,9 +13,9 @@
 -->
 
 <gf:messageBundle bundle="application" var="application_bundle"/>
-  <div class="footer pull-right" style="color: #666;">
-    <p>
-      <div id="footerMessageBuildVersion"><g:applicationVersion /></div>
-      ${application_bundle['message.footer']}
-    </p>
+<footer>
+  <div class="container copyright text-center">
+    <div id="footerMessageBuildVersion"><small><g:applicationVersion /></small></div>
+    ${application_bundle['message.footer']}
   </div>
+</footer>

@@ -25,6 +25,8 @@
     <gf:messageBundle bundle="grailsflow.common" var="common"/>
     <r:require modules="grailsflow"/>
     <r:require modules="bootstrap"/>
+    <r:require modules="font-awesome"/>
+
     <r:layoutResources/>
     <g:layoutHead/>
 

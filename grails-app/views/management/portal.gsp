@@ -59,12 +59,12 @@
                     </g:link>.
                 </g:if>
             </div>
-            <table class="table table-striped" width="100%">
+            <table class="table">
                     <thead>
                     <tr>
                         <th>${process_types['grailsflow.label.processType']}</th>
                         <th width="70%">${process_types['grailsflow.label.description']}</th>
-                        <th>${process_types['grailsflow.label.operation']}</th>
+                        <th>&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -83,8 +83,8 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">${worklist['grailsflow.title.worklist']}</div>
-
-            <table width="100%" class="table table-striped">
+            <g:if test="${worklistTotal}">
+              <table class="table">
                  <thead>
                    <tr>
                       <th>${worklist['grailsflow.label.nodeID']}</th>
@@ -117,10 +117,16 @@
                         </tr>
                    </g:each>
                  </tbody>
-            </table>
-            <div class="paginateButtons">
-              <g:paginate total="${worklistTotal}" action="portal"/>
-            </div>
+              </table>
+              <g:if test="${worklistTotal > (grailsApplication.mainContext.maxResultSize)}">
+                <div class="paginateButtons">
+                  <g:paginate total="${worklistTotal}" action="portal"/>
+                </div>
+              </g:if>
+            </g:if>
+            <g:else>
+              <div class="bs-callout bs-callout-info">${common['grailsflow.message.noItems']}</div>
+            </g:else>
         </div>
     </div>
   </div>
