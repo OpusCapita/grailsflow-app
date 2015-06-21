@@ -13,44 +13,48 @@
   required:
     * nodeDetails             bean of com.jcatalog.grailsflow.bean.NodeDetails type
 -->
-    <h2 class="headline"><i>Please Create Your Holiday Request Letter: </i></h2>
+    <h2><i>Please Create Your Holiday Request Letter: </i></h2>
 
-    <table class="portal" style="background-color: rgb(210,232,255);">
-      <tr>
-        <td>Person Name</td>
-        <td><input name="var_requesterName" size="25" value="${nodeDetails.variables.requesterName?.value}"/></td>
-      </tr>
-      <tr>
-        <td>E-Mail</td>
-        <td><input name="var_requesterMail" size="35" value="${nodeDetails.variables.requesterMail?.value}" /></td>
-      </tr>
-      <tr>
-        <td>Holiday Start</td>
-        <td>
-           <gf:jQueryCalendar property="var_holidaysStart" pattern="${gf.datePattern()}"
-                   value="${nodeDetails.variables.holidaysStart ? nodeDetails.variables.holidaysStart.value : new Date()}" />
-        </td>
-      </tr>
-      <tr>
-        <td>Holiday End</td>
-        <td>
-          <gf:jQueryCalendar property="var_holidaysEnd" pattern="${gf.datePattern()}"
-              value="${nodeDetails.variables.holidaysEnd ? nodeDetails.variables.holidaysEnd.value : new Date()}"/>
-      </tr>
-      <tr>
-        <td>Manager E-Mail</td>
-        <td><input name="var_managerMail" size="35" value="${nodeDetails.variables.managerMail?.value}" /></td>
-      </tr>
-      <tr>
-        <td>HR E-Mail</td>
-        <td><input name="var_hrMail" size="35" value="${nodeDetails.variables.hrMail?.value}" /></td>
-      </tr>
-      <tr>
-        <td>Message</td>
-        <td><textarea name="var_message" cols="60" rows="5">${nodeDetails.variables.message?.value}</textarea></td>
-      </tr>
-    </table>
+    <div class="row">
+      <div class="col-md-8">
+        <table class="table" style="background-color: rgb(210,232,255);">
+          <tr>
+            <td>Person Name</td>
+            <td><input name="var_requesterName" size="25" value="${nodeDetails.variables.requesterName?.value}"/></td>
+          </tr>
+          <tr>
+            <td>E-Mail</td>
+            <td><input name="var_requesterMail" size="35" value="${nodeDetails.variables.requesterMail?.value}" /></td>
+          </tr>
+          <tr>
+            <td>Holiday Start</td>
+            <td>
+               <gf:bootstrapCalendar property="var_holidaysStart"
+                       value="${nodeDetails.variables.holidaysStart ? nodeDetails.variables.holidaysStart.value : new Date()}" />
+            </td>
+          </tr>
+          <tr>
+            <td>Holiday End</td>
+            <td>
+              <gf:bootstrapCalendar property="var_holidaysEnd"
+                  value="${nodeDetails.variables.holidaysEnd ? nodeDetails.variables.holidaysEnd.value : new Date()}"/>
+          </tr>
+          <tr>
+            <td>Manager E-Mail</td>
+            <td><input name="var_managerMail" size="35" value="${nodeDetails.variables.managerMail?.value}" /></td>
+          </tr>
+          <tr>
+            <td>HR E-Mail</td>
+            <td><input name="var_hrMail" size="35" value="${nodeDetails.variables.hrMail?.value}" /></td>
+          </tr>
+          <tr>
+            <td>Message</td>
+            <td><textarea name="var_message" cols="60" rows="5">${nodeDetails.variables.message?.value}</textarea></td>
+          </tr>
+        </table>
 
-    <br/>
+        <br/>
 
-    <g:submitButton name="event_submit" value="Send Request" class="button"/>
+        <g:submitButton name="event_submit" value="Send Request" class="btn btn-primary"/>
+      </div>
+    </div>
