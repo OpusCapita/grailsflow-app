@@ -13,7 +13,7 @@ createVersionInfo = {
 
 copySampleWorkarea = {
   Ant.copy(todir: "web-app/workarea", overwrite: true) {
-    fileset (dir: "../grailsflow-core-plugin/src/samples", includes: '**/*.groovy')
+    fileset (dir: "${grailsflowPluginDir}/src/samples", includes: '**/*.groovy')
   }
 
 }
