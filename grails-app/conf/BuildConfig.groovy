@@ -4,7 +4,7 @@ grails.work.dir = "target"
 
 grails.project.war.file = "${appName}-${appVersion}.war"
 
-//grails.plugin.location.'grailsflow' = '../grailsflow-core-plugin'
+grails.plugin.location.'grailsflow' = '../grailsflow-core-plugin'
 
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
@@ -38,9 +38,7 @@ grails.project.dependency.resolution = {
                 'javax.validation:validation-api:1.1.0.Final')
         runtime ('javax.mail:mail:1.4',
                 'org.hibernate:hibernate-validator:5.0.3.Final',
-                'javax.activation:activation:1.1',
-                'org.apache.ant:ant:1.7.1',
-                'org.apache.ant:ant-launcher:1.7.1')
+                'javax.activation:activation:1.1')
     }
     
     plugins {
@@ -51,7 +49,7 @@ grails.project.dependency.resolution = {
         runtime ":mail:1.0.5"
 
         compile ":twitter-bootstrap:3.3.1"
-        compile ":grailsflow:1.7.2"
+      //  compile ":grailsflow:1.7.2"
         runtime ':font-awesome-resources:4.3.0.1'
         runtime(':jquery:1.11.1',
                 ':jquery-ui:1.10.4')
