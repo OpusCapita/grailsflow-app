@@ -32,7 +32,7 @@ class ManagementController extends GrailsFlowSecureController {
     def processWorklistService
 
     def index = {
-        redirect(action: portal, params: params)
+        redirect(action: "portal", params: params)
     }
 
     def portal = {

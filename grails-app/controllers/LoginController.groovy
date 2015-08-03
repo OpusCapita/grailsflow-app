@@ -42,7 +42,7 @@ class LoginController extends GrailsFlowSecureController {
 
     def logout = {
         session.user = null
-        redirect(action: index)
+        redirect(action: "index")
     }
 
 }
