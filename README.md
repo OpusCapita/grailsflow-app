@@ -4,7 +4,7 @@
 
 The application demonstrates usage of [grailsflow plugin](https://github.com/jCatalog/grailsflow-core-plugin).
 
-It is now compatible with **Grails 2.4.x**, current released version: **1.7** [release notes](http://jira.jcatalog.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+GFW+AND+fixVersion+%3D+%221.7%22)
+It is now compatible with **Grails 2.4.x**, current released version: **1.7.3** [release notes](http://jira.jcatalog.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+GFW+AND+fixVersion+%3D+%221.7.3%22)
 
 For the latest updates and release information visit [Grailsflow site](http://grailsflow.org) and follow [@grailsflow](https://twitter.com/grailsflow) on twitter.
 
