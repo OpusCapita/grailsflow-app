@@ -12,10 +12,9 @@
   limitations under the License.
 -->
 
-<gf:messageBundle bundle="application" var="application_bundle"/>
 <footer>
   <div class="container copyright text-center">
     <div id="footerMessageBuildVersion"><small><g:applicationVersion /></small></div>
-    ${application_bundle['message.footer']}
+    <g:message code="message.footer"/>
   </div>
 </footer>

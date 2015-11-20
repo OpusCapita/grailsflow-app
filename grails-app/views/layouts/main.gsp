@@ -27,7 +27,6 @@
     <g:layoutHead/>
   </head>
   <body>
-  <gf:messageBundle bundle="grailsflow.common" var="common"/>
   <div>
     <g:if test="${!session.externalCall}">
       <div class="header">

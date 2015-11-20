@@ -22,7 +22,6 @@
       <g:layoutTitle default="Grailsflow"/>
     </title>
 
-    <gf:messageBundle bundle="grailsflow.common" var="common"/>
     <r:require modules="grailsflow"/>
     <r:require modules="bootstrap"/>
     <r:require modules="font-awesome"/>

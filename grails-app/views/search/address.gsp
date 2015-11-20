@@ -23,7 +23,7 @@
   </r:script>
 </head>
 <body>
-<gf:messageBundle bundle="grailsflow.common" var="common"/>
+
 <g:form controller="search" action="search" name="SearchForm" method="GET">
     <input id="callbackFunctionName" name="callbackFunctionName" type="hidden" value="${params.callbackFunctionName}"/>
     <input name="domainClass" type="hidden" value="Address"/>
@@ -44,7 +44,7 @@
         <tr>
           <td colspan="3"><g:actionSubmit value="${common['grailsflow.command.search']}" class="button"/> <input type="button" class="button"
                                                                                      onclick="clearSearchFields()"
-                                                                                     value="${common['command.clear']}"></td>
+                                                                                     value="${g.message(code: 'command.clear')}"></td>
         </tr>
       </tbody>
     </table>

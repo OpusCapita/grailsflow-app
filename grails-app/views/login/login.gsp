@@ -19,13 +19,11 @@
     <link rel="stylesheet" href="${g.resource(dir:'css',file:'layout.css')}"></link>
     <link rel="stylesheet" href="${g.resource(dir:'css',file:'default.css')}"></link>
     <link rel="stylesheet" href="${g.resource(dir:'css/login',file:'login.css')}"></link>
-    <gf:messageBundle bundle="login" var="login"/>
-    <gf:messageBundle bundle="application" var="application_bundle"/>
 
     <r:require modules="bootstrap"/>
 
 
-    <title>${login['title.login']}</title>
+    <title><g:message code="title.login"/></title>
     <r:layoutResources/>
   </head>
 
@@ -67,7 +65,7 @@
                       <table id="loginForm" cellspacing="0px">
                         <tr>
                           <td align="right">
-                            <label for="loginName">${login['label.userName']}</label>
+                            <label for="loginName"><g:message code="label.userName"/></label>
                           </td>
                           <td align="left">
                             <input type="text" class="transparency" name="loginName" id="loginName"/>
@@ -75,7 +73,7 @@
                         </tr>
                         <tr>
                           <td align="right">
-                            <label for="loginPassword">${login['label.userPassword']}</label>
+                            <label for="loginPassword"><g:message code="label.userPassword"/></label>
                           </td>
                           <td align="left">
                             <input type="password" class="transparency" name="password" id="loginPassword"/>
@@ -83,7 +81,7 @@
                         </tr>
                         <tr>
                           <td align="right">
-                            <label for="language">${login['label.language']}</label>
+                            <label for="language"><g:message code="label.language"/></label>
                           </td>
                           <td align="left">
                             <g:select id="language" from="${Language.list() ? Language.list()*.languageId : [] }" value="${request.locale}" name="language" />
@@ -98,7 +96,7 @@
                         <tr>
                           <td>&#160;</td>
                           <td align="left">
-                            <input type="submit" class="button" name="loginSubmit" id="loginSubmit" value="${login['command.login']}"/>
+                            <input type="submit" class="button" name="loginSubmit" id="loginSubmit" value="${g.message(code:'command.login')}"/>
                           </td>
                         </tr>
                       </table>
@@ -109,10 +107,10 @@
                   </div>
                 </div>
                 <div align="center">
-                  <p style="color: #002276;">${login['label.loginHint']}</p>
+                  <p style="color: #002276;"><g:message code="label.loginHint"/></p>
                     <table valign="top">
                       <g:each var="user" in="${User.list()}">
-                        <tr><td><b class="title">${login['label.userName']}:</b>&nbsp;"${user.username}",&nbsp;<b class="title">${login['label.userPassword']}:</b>&nbsp;"${user.password}"</td></tr>
+                        <tr><td><b class="title"><g:message code="label.userName"/>:</b>&nbsp;"${user.username}",&nbsp;<b class="title"><g:message code="label.userPassword"/>:</b>&nbsp;"${user.password}"</td></tr>
                       </g:each>
                     </table>
                 </div>

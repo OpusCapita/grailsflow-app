@@ -17,20 +17,14 @@
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
    <meta name="layout" content="grailsflow"/>
 
-   <gf:messageBundle bundle="application" var="application_bundle"/>
-   <gf:messageBundle bundle="menu" var="menu_bundle"/>
-   <gf:messageBundle bundle="grailsflow.processTypes" var="process_types"/>
-   <gf:messageBundle bundle="grailsflow.worklist" var="worklist"/>
-   <gf:messageBundle bundle="grailsflow.common" var="common"/>
-
-   <title>${application_bundle['label.appTitle']}</title>
+   <title><g:message code="label.appTitle"/></title>
   </head>
 
   <body>
   <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
-            <div class="panel-heading">${menu_bundle['menu.grailsManagement']}</div>
+            <div class="panel-heading"><g:message code="menu.grailsManagement"/></div>
             <div class="panel-body">
                 <p>If you use the Grailsflow demo application for the first time, please read the
                    <a href="http://grailsflow.org/about/firststeps-copy/">first steps</a>
@@ -46,54 +40,54 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">${process_types['grailsflow.title.startProcess']}</div>
+            <div class="panel-heading"><g:message code="plugin.grailsflow.title.startProcess"/></div>
             <div class="panel-body">
                 <img src="${g.resource(dir:'images/general',file:'warning16.gif')}"/>&nbsp;
-                ${processClasses.size()}&nbsp;${application_bundle['label.of']}&nbsp;${typesTotal}&nbsp;
-                ${application_bundle['message.processTypes.listed']}
+                ${processClasses.size()}&nbsp;<g:message code="label.of"/>&nbsp;${typesTotal}&nbsp;
+                <g:message code="message.processTypes.listed"/>
 
                 <g:if test="${processClasses.size() < typesTotal}">
-                    ${application_bundle['message.processTypes.reviewAll']}&nbsp;
-                    <g:link action="showTypes" controller="process">
-                        ${menu_bundle['menu.startProcesType']}
-                    </g:link>.
+                  <g:message code="message.processTypes.reviewAll"/>&nbsp;
+                  <g:link action="showTypes" controller="process">
+                    <g:message code="menu.startProcesType"/>
+                  </g:link>.
                 </g:if>
             </div>
             <table class="table">
-                    <thead>
-                    <tr>
-                        <th>${process_types['grailsflow.label.processType']}</th>
-                        <th width="70%">${process_types['grailsflow.label.description']}</th>
-                        <th>&nbsp;</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <g:each in="${processClasses}" var="item" status="i">
-                        <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                            <td><gf:translatedValue translations="${item.label}" default="${item.processType}"/></td>
-                            <td><gf:translatedValue translations="${item.description}" default=""/></td>
-                            <td>
-                                <g:link action="startProcess" class="btn btn-sm btn-default" controller="processManagement" id="${item.processType}" title="${common['grailsflow.command.start']}">${common['grailsflow.command.start']}</g:link>
-                            </td>
-                        </tr>
-                    </g:each>
-                    </tbody>
+              <thead>
+                <tr>
+                  <th><g:message code="plugin.grailsflow.label.processType"/></th>
+                  <th width="70%"><g:message code="plugin.grailsflow.label.description"/></th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <g:each in="${processClasses}" var="item" status="i">
+                  <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
+                    <td><gf:translatedValue translations="${item.label}" default="${item.processType}"/></td>
+                    <td><gf:translatedValue translations="${item.description}" default=""/></td>
+                    <td>
+                      <g:link action="startProcess" class="btn btn-sm btn-default" controller="processManagement" id="${item.processType}" title="${g.message(code: 'plugin.grailsflow.command.start')}"><g:message code="plugin.grailsflow.command.start"/></g:link>
+                    </td>
+                  </tr>
+                </g:each>
+              </tbody>
             </table>
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">${worklist['grailsflow.title.worklist']}</div>
+            <div class="panel-heading"><g:message code="plugin.grailsflow.title.worklist"/></div>
             <g:if test="${worklistTotal}">
               <table class="table">
                  <thead>
                    <tr>
-                      <th>${worklist['grailsflow.label.nodeID']}</th>
-                      <th>${worklist['grailsflow.label.processType']}</th>
-                      <th>${worklist['grailsflow.label.description']}</th>
-                      <th>${worklist['grailsflow.label.status']}</th>
-                      <th>${worklist['grailsflow.label.caller']}</th>
-                      <th>${worklist['grailsflow.label.startedOn']}</th>
-                      <th>${worklist['grailsflow.label.dueOn']}</th>
+                      <th><g:message code="plugin.grailsflow.label.nodeID"/></th>
+                      <th><g:message code="plugin.grailsflow.label.processType"/></th>
+                      <th><g:message code="plugin.grailsflow.label.description"/></th>
+                      <th><g:message code="plugin.grailsflow.label.status"/></th>
+                      <th><g:message code="plugin.grailsflow.label.caller"/></th>
+                      <th><g:message code="plugin.grailsflow.label.startedOn"/></th>
+                      <th><g:message code="plugin.grailsflow.label.dueOn"/></th>
                     </tr>
                  </thead>
                  <tbody>
@@ -125,7 +119,7 @@
               </g:if>
             </g:if>
             <g:else>
-              <div class="bs-callout bs-callout-info">${common['grailsflow.message.noItems']}</div>
+              <div class="bs-callout bs-callout-info"><g:message code="plugin.grailsflow.message.noItems"/></div>
             </g:else>
         </div>
     </div>
