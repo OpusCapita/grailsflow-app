@@ -22,7 +22,6 @@
 
     <r:require modules="bootstrap"/>
 
-
     <title><g:message code="title.login"/></title>
     <r:layoutResources/>
   </head>
@@ -127,5 +126,6 @@
       </div>
     </div>
 
+    <r:layoutResources/>
   </body>
 </html>
