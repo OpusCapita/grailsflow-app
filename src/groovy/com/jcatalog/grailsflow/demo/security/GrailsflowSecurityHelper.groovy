@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 package com.jcatalog.grailsflow.demo.security
 
 import com.jcatalog.grailsflow.security.SecurityHelper
@@ -44,6 +44,10 @@ class GrailsflowSecurityHelper implements SecurityHelper {
     }
 
     List<String> getUserGroups(session) {
+        return []
+    }
+
+    List<String> getCustomUserAuthorities(session) {
         return []
     }
 }

@@ -86,6 +86,33 @@ if (grails.util.Holders.grailsApplication?.warDeployed) {
   grailsflow.i18n.locations = ["file:${grails.util.BuildSettingsHolder.settings?.resourcesDir?.path}/grails-app/i18n/"]
 }
 
+grailsflow {
+    format {
+        datePatterns = {
+            [
+                'en_GB': 'dd-MM-yyyy',
+                'en': 'yyyy-MM-dd',
+                'de': 'MM-dd-yyyy'
+            ]
+        }
+        dateTimePatterns = {
+            [
+                'en': 'yyyy-MM-dd HH:mm:ss'
+            ]
+        }
+        numberFormats = {
+            [
+                'en': '#0.##'
+            ]
+        }
+        decimalSeparators = {
+            [
+                'it': ','
+            ]
+        }
+    }
+}
+
 // configuring nodeActivator comparator (default variant is sorting by date desc)
  //  grailsflow.nodeActivator.comparator =  { def node1, def node2 ->
  //      return node1.nodeID <=> node2.nodeID
@@ -98,13 +125,13 @@ log4j = {
     console name:'stdout', layout:pattern(conversionPattern: '[%r] %c{2} %m%n')
     rollingFile name:'rollingfile', maxFileSize:52428800, file:"grailsflow.log", maxBackupIndex:10, layout:pattern(conversionPattern: '%d [%t] %-5p (%c) - %m%n')
   }
-  
+
 	root {
 	  info 'stdout','rollingfile'
 	  additivity = true
-	}  
+	}
 
-  error	 "org.springframework.aop.framework.Cglib2AopProxy", 
+  error	 "org.springframework.aop.framework.Cglib2AopProxy",
          "org.hibernate.cache.UpdateTimestampsCache"
 
   debug	 "com.jcatalog.grailsflow",
@@ -124,7 +151,7 @@ environments {
     /* runtime reload gsp pages */
     grails.gsp.enable.reload = true
   }
-} 
+}
 
 // The default codec used to encode data with ${}
 grails.views.default.codec="none" // none, html, base64
